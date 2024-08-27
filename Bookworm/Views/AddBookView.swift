@@ -13,13 +13,13 @@ struct AddBookView: View {
     
     @State private var title = ""
     @State private var author = ""
-    @State private var rating = 3
-    @State private var genre = "Fantasy"
+    @State private var rating = 1
+    @State private var genre = "Finance"
     @State private var noteTitle = ""
     @State private var noteSubtitle = ""
   
     
-    let genres = ["Fantasy", "Horror", "Kids", "Mystery", "Poetry", "Romance", "Thriller"]
+    let genres = ["Fantasy","Finance", "Horror", "Kids", "Mystery", "Poetry", "Romance", "personal development"]
     
     var body: some View {
         NavigationStack {
@@ -38,11 +38,15 @@ struct AddBookView: View {
                 
                 
                 Section {
-                    Button("Salvar") {
-                        let newBook = Book(title: title, author: author, genre: genre, rating: rating)
-                        
-                        modelContext.insert(newBook)
-                        dismiss()
+                    HStack {
+                        Spacer()
+                        Button("Salvar") {
+                            let newBook = Book(title: title, author: author, genre: genre, rating: rating)
+                            
+                            modelContext.insert(newBook)
+                            dismiss()
+                        }
+                        Spacer()
                     }
                 }
             }
