@@ -14,6 +14,8 @@ struct ContentView: View {
     @Query(sort:[SortDescriptor(\Book.title),SortDescriptor(\Book.author)]) var books: [Book]
     
     @State var showingAddScreen = false
+    @State private var shouldShowSuccess = false
+    @State private var isLoading = false
     
     var body: some View {
         NavigationStack {
@@ -55,12 +57,26 @@ struct ContentView: View {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Add book", systemImage: "plus") {
                         showingAddScreen.toggle()
+                        isLoading = false
                     }
                 }
             }
             .sheet(isPresented: $showingAddScreen) {
-                AddBookView()
+                AddBookView(shouldShowSuccess: $shouldShowSuccess)
                     .presentationDetents([.height(400)])
+            }
+            .overlay {
+                if shouldShowSuccess {
+                    CheckmarkPopoverView()
+                        .transition(.scale.combined(with: .opacity))
+                        .onAppear {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                                withAnimation(.spring().delay(2)) {
+                                    self.shouldShowSuccess.toggle()
+                                }
+                            }
+                        }
+                }
             }
         }
     }
