@@ -28,7 +28,7 @@ struct DetailView: View {
                     
                 
                 
-                Text(book.author.uppercased())
+                Text(book.genre.uppercased())
                     .fontWeight(.black)
                     .padding(8)
                     .foregroundStyle(.white)
@@ -36,26 +36,14 @@ struct DetailView: View {
                     .clipShape(.capsule)
                     .offset(y: -140)
                     .padding(.trailing)
+              
                 
-                HStack {
-                    Text(book.genre)
-                        .font(.system(size: 20))
-                        .fontWeight(.black)
-                        .padding(8)
-                        .foregroundStyle(.white)
-                        .background(.black.opacity(0.75))
-                        .clipShape(.capsule)
-                        .padding(.bottom)
-                        .padding(.leading)
-                   
-                    
-                    Spacer()
-                    
-                    RatingView(rating: .constant(book.rating))
-                        .font(.system(size: 18))
-                        .offset(y: -5)
-                        .padding(.trailing)
-                }
+                RatingView(rating: .constant(book.rating))
+                    .font(.system(size: 18))
+                    .offset(y: -5)
+                    .padding(.trailing)
+                    .padding(.bottom)
+
                 
                 
             }
@@ -64,6 +52,10 @@ struct DetailView: View {
             VStack(alignment: .leading) {
                 
                 HStack(spacing: 20) {
+                    
+                    Text(book.title)
+                        .font(.system(size: 20, weight: .semibold))
+                       
                     
                     Spacer()
                     
@@ -101,7 +93,7 @@ struct DetailView: View {
             .padding()
             
         }
-        .navigationTitle(book.title)
+        .navigationTitle(book.author)
         .alert("Delete book", isPresented: $showingDeleteAlert) {
             Button("Delete", role: .destructive, action: deleteBook)
             Button("Cancel", role: .cancel) {}

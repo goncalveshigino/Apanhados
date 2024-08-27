@@ -60,6 +60,7 @@ struct ContentView: View {
             }
             .sheet(isPresented: $showingAddScreen) {
                 AddBookView()
+                    .presentationDetents([.height(400)])
             }
         }
     }
