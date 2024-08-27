@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D63804512B877F8D00C62954 /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63804502B877F8D00C62954 /* NoteView.swift */; };
 		D63804532B87859500C62954 /* CustomCircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63804522B87859500C62954 /* CustomCircleButtonView.swift */; };
+		D67B32032C7DEFB3008A9F12 /* CheckmarkPopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67B32022C7DEFB3008A9F12 /* CheckmarkPopoverView.swift */; };
 		D67FE0CF2BADA4C000FEBE91 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67FE0CE2BADA4C000FEBE91 /* Note.swift */; };
 		D691FD4D2B84F3B700D7FC84 /* BookwormApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D691FD4C2B84F3B700D7FC84 /* BookwormApp.swift */; };
 		D691FD4F2B84F3B700D7FC84 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D691FD4E2B84F3B700D7FC84 /* ContentView.swift */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		D63804502B877F8D00C62954 /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
 		D63804522B87859500C62954 /* CustomCircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCircleButtonView.swift; sourceTree = "<group>"; };
+		D67B32022C7DEFB3008A9F12 /* CheckmarkPopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckmarkPopoverView.swift; sourceTree = "<group>"; };
 		D67FE0CE2BADA4C000FEBE91 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		D691FD492B84F3B700D7FC84 /* Bookworm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bookworm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D691FD4C2B84F3B700D7FC84 /* BookwormApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookwormApp.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				D6C25E322C7B244F0038F67A /* Home */,
 				D6C25E302C7B23950038F67A /* Details */,
 				D691FD5E2B85DC3900D7FC84 /* AddBookView.swift */,
+				D67B32022C7DEFB3008A9F12 /* CheckmarkPopoverView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				D6C25E2C2C7AB2370038F67A /* GroupBoxModifier.swift in Sources */,
 				D6C25E3C2C7B3AC60038F67A /* DetailView+.swift in Sources */,
 				D691FD5D2B85DB0500D7FC84 /* Book.swift in Sources */,
+				D67B32032C7DEFB3008A9F12 /* CheckmarkPopoverView.swift in Sources */,
 				D691FD652B8606B600D7FC84 /* DetailView.swift in Sources */,
 				D6C25E2E2C7B1E7D0038F67A /* NoteCustomStyle.swift in Sources */,
 				D67FE0CF2BADA4C000FEBE91 /* Note.swift in Sources */,

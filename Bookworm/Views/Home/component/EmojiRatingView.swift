@@ -22,10 +22,10 @@ struct EmojiRatingView: View {
             Text("🫤")
             
         case 4:
-            Text("😊")
+            Text("💰")
             
         default:
-            Text("🤯")
+            Text("📚")
         }
     }
 }

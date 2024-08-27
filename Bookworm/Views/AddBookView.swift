@@ -17,7 +17,10 @@ struct AddBookView: View {
     @State private var genre = "Finance"
     @State private var noteTitle = ""
     @State private var noteSubtitle = ""
-  
+    
+    @Binding var shouldShowSuccess: Bool
+   
+    
     
     let genres = ["Fantasy","Finance", "Horror", "Kids", "Mystery", "Poetry", "Romance", "personal development"]
     
@@ -40,10 +43,12 @@ struct AddBookView: View {
                 Section {
                     HStack {
                         Spacer()
+                        
                         Button("Salvar") {
                             let newBook = Book(title: title, author: author, genre: genre, rating: rating)
                             
                             modelContext.insert(newBook)
+                            self.shouldShowSuccess.toggle()
                             dismiss()
                         }
                         Spacer()
@@ -56,5 +61,5 @@ struct AddBookView: View {
 }
 
 #Preview {
-    AddBookView()
+    AddBookView(shouldShowSuccess: .constant(false))
 }
